@@ -1,0 +1,18 @@
+N  =  int(input("Cantidad de números para ingresar "))
+sumInterPar=0
+for i in range(N):
+    x  =  int(input("Ingrese un número de 3 cifras"))
+
+    while (100>x or x>999): #validamos 3 dígitos en a y b
+        x = int(input("Ingrese un número de 3 cifras"))
+
+    #digito del medio
+    med= (x%100)//10 #el dígito del medio de x
+    print(med,end=",")
+    if med%2==0:
+        sumInterPar=sumInterPar+med
+print()
+if sumInterPar>0:
+    print("suma",sumInterPar)
+else:
+    print("No existe ningún número para sumar")
